@@ -39,6 +39,7 @@ public class PaginationScenarioAutomationPracticeBlogSpot {
 					String price = row.findElement(By.xpath(".//td[3]")).getText();
 					System.out.println(price +" of "+Product);
 					System.out.println("Found on page " + i);
+					System.out.println("Pagination");
 					flag = true;
 					break;
 				}
