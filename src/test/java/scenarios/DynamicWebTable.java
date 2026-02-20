@@ -16,14 +16,15 @@ public class DynamicWebTable {
 		driver.manage().window().maximize();
 		
 		driver.get("https://testautomationpractice.blogspot.com/");
-		WebElement elem = driver.findElement(By.xpath("//h2[.='Dynamic Web Table']"));
+		WebElement ele = driver.findElement(By.xpath("//h2[.='Dynamic Web Table']"));
 		JavascriptExecutor js = (JavascriptExecutor)driver;
-		Thread.sleep(3000);
-		js.executeScript("arguments[0].scrollIntoView(true)", elem);
-		Thread.sleep(3000);
-		String name = "Firefox";
+		Thread.sleep(2000);
+		js.executeScript("arguments[0].scrollIntoView(true)", ele);
+		Thread.sleep(2000);
+		String name = "Chrome";
 		String cpu = driver.findElement(By.xpath("//table[@id='taskTable']/tbody/tr/td[.='"+name+"']/following-sibling::td[contains(.,'%')]")).getText();
 		System.out.println(cpu);
+		System.out.println("dynamic table");
 		driver.quit();
 	
 	}
