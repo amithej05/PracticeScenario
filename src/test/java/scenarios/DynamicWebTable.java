@@ -25,6 +25,7 @@ public class DynamicWebTable {
 		String cpu = driver.findElement(By.xpath("//table[@id='taskTable']/tbody/tr/td[.='"+name+"']/following-sibling::td[contains(.,'%')]")).getText();
 		System.out.println(cpu);
 		System.out.println("dynamic table");
+		System.out.println("print");
 		driver.quit();
 	
 	}
